@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!--<Button-->
+        <!--android:id="@+id/am_btn_test"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="To Test" />-->
+
+    <Button
+        android:id="@+id/am_btn_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="To Status" />
+
+    <!--<Button-->
+        <!--android:id="@+id/am_btn_location"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="To Location" />-->
+
+</LinearLayout>
