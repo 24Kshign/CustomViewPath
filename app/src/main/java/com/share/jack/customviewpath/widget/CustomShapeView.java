@@ -6,12 +6,11 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by jack on 17/4/17
+ *
  */
 
 public class CustomShapeView extends View {
@@ -67,11 +66,15 @@ public class CustomShapeView extends View {
 //         */
 //        path.addRoundRect(rectF, 150, 150, Path.Direction.CW);    //画一个圆角矩形
 
+        canvas.rotate(100, 50, 50);
+//        canvas.drawArc(new RectF(0, 0, 50 * 2, 50 * 2), 90, 90, false, mPaint);
+        path.lineTo(100, 100);
+
         /**
          * 椭圆
          */
-        RectF rect = new RectF(100,100,800,500);
-        path.addOval(rect, Path.Direction.CW);
+//        RectF rect = new RectF(100, 100, 800, 500);
+//        path.addOval(rect, Path.Direction.CW);
 
         canvas.drawPath(path, mPaint);
     }

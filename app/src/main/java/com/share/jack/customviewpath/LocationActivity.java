@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.util.List;
 
 /**
- * Created by jack on 17/4/25
+ *
  */
 
 public class LocationActivity extends Activity {

@@ -33,7 +33,6 @@ public class CustomStatusView extends View {
     private int startAngle = -90;
     private int minAngle = -90;
     private int sweepAngle = 120;
-    private int rotateDelta = 4;
     private int curAngle = 0;
 
     //追踪Path的坐标
@@ -124,14 +123,14 @@ public class CustomStatusView extends View {
                 minAngle = startAngle;
                 sweepAngle = 20;
             }
-            canvas.rotate(curAngle += rotateDelta, progressRadius, progressRadius);  //旋转rotateDelta=4的弧长
+            canvas.rotate(curAngle += 4, progressRadius, progressRadius);  //旋转的弧长为4
             canvas.drawArc(new RectF(0, 0, progressRadius * 2, progressRadius * 2), startAngle, sweepAngle, false, mPaint);
             invalidate();
         } else if (mStatus == StatusEnum.LoadSuccess) {     //加载成功
             mPaint.setColor(loadSuccessColor);
             mPathCircle.addCircle(getWidth() / 2, getWidth() / 2, progressRadius, Path.Direction.CW);
             mPathMeasure.setPath(mPathCircle, false);
-            mPathMeasure.getSegment(0, circleValue * mPathMeasure.getLength(), mPathCircleDst, true);
+            mPathMeasure.getSegment(0, circleValue * mPathMeasure.getLength(), mPathCircleDst, true);   //截取path并保存到mPathCircleDst中
             canvas.drawPath(mPathCircleDst, mPaint);
 
             if (circleValue == 1) {      //表示圆画完了,可以钩了

@@ -19,7 +19,7 @@ import android.view.View;
 import java.lang.ref.WeakReference;
 
 /**
- * @author Administrator
+ *
  */
 public class WaterWaveProgress extends View {
     // 水的画笔 // 画圆环的画笔// 进度百分比的画笔

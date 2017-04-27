@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.View;
 
 /**
- * Created by jack on 17/4/25
+ *
  */
 
 public class CustomPathMeasure extends View {
@@ -62,7 +62,6 @@ public class CustomPathMeasure extends View {
         // 硬件加速的BUG
         mDst.lineTo(0,0);
         float stop = mLength * mAnimatorValue;
-        Log.d("TAG", "stop----->" + stop);
         Log.d("TAG", "AnimatorValue----->" + mAnimatorValue);
         float start = (float) (stop - ((0.5 - Math.abs(mAnimatorValue - 0.5)) * mLength));
         pathMeasure.getSegment(start, stop, mDst, true);

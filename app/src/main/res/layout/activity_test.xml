@@ -2,30 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="标题"
-        android:textColor="@android:color/white"
-        android:textSize="18dp" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/at_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorAccent"
-        android:gravity="center"
-        android:text="底部"
-        android:textColor="@android:color/white"
-        android:textSize="18dp" />
+    <com.share.jack.customviewpath.widget.CustomPathMeasure
+        android:id="@+id/at_path_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -8,7 +8,7 @@ import android.widget.Button;
 import com.share.jack.customviewpath.widget.CustomStatusView;
 
 /**
- * Created by jack on 17/4/21
+ *
  */
 
 public class StatusActivity extends Activity implements View.OnClickListener {

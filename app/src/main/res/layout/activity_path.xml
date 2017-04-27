@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.share.jack.customviewpath.widget.CustomPathView
+    <com.share.jack.customviewpath.widget.CustomShapeView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
