@@ -147,16 +147,4 @@
 
 ![失败画叉叉](http://upload-images.jianshu.io/upload_images/490111-1a478dbc1d49f3a8.gif?imageMogr2/auto-orient/strip)
 
-### 参考：
-
-[Android自定义之仿支付宝支付成功、失败状态的加载进度](http://blog.csdn.net/xiaxiazaizai01/article/details/52914558)
-
-[自定义View（三）使用Path仿支付宝支付成功效果](http://www.jianshu.com/p/93b5f7d231a7)
-
-[PathMeasure之迷径追踪](http://blog.csdn.net/eclipsexys/article/details/51992473)
-
-
-到此就完成了自定义的原型进度条了。源码已上传至[Github](https://github.com/Jakemesdg/CustomViewPath)，有需要的同学可以下载下来看看，欢迎**Star，Fork**
-##### 同时感谢以上引用到博客的主人，感谢！！！
-
 ![公众号：Android技术经验分享](http://upload-images.jianshu.io/upload_images/490111-8c1cdb3bd9dfd604.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
