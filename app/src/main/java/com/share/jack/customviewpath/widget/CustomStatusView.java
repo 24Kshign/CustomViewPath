@@ -8,6 +8,8 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
@@ -148,7 +150,6 @@ public class CustomStatusView extends View {
             mPathMeasure.setPath(mPathCircle, false);
             mPathMeasure.getSegment(0, circleValue * mPathMeasure.getLength(), mPathCircleDst, true);
             canvas.drawPath(mPathCircleDst, mPaint);
-
             if (circleValue == 1) {  //表示圆画完了,可以画叉叉的右边部分
                 failurePathRight.moveTo(getWidth() / 3 * 2, getWidth() / 3);
                 failurePathRight.lineTo(getWidth() / 3, getWidth() / 3 * 2);
@@ -157,7 +158,6 @@ public class CustomStatusView extends View {
                 mPathMeasure.getSegment(0, failValueRight * mPathMeasure.getLength(), mPathCircleDst, true);
                 canvas.drawPath(mPathCircleDst, mPaint);
             }
-
             if (failValueRight == 1) {    //表示叉叉的右边部分画完了,可以画叉叉的左边部分
                 failurePathLeft.moveTo(getWidth() / 3, getWidth() / 3);
                 failurePathLeft.lineTo(getWidth() / 3 * 2, getWidth() / 3 * 2);
@@ -167,6 +167,19 @@ public class CustomStatusView extends View {
                 canvas.drawPath(mPathCircleDst, mPaint);
             }
         }
+    }
+
+    //重制路径
+    private void resetPath() {
+        successValue = 0;
+        circleValue = 0;
+        failValueLeft = 0;
+        failValueRight = 0;
+        mPathCircle.reset();
+        mPathCircleDst.reset();
+        failurePathLeft.reset();
+        failurePathRight.reset();
+        successPath.reset();
     }
 
     private void setStatus(StatusEnum status) {
@@ -179,11 +192,13 @@ public class CustomStatusView extends View {
     }
 
     public void loadSuccess() {
+        resetPath();
         setStatus(StatusEnum.LoadSuccess);
         startSuccessAnim();
     }
 
     public void loadFailure() {
+        resetPath();
         setStatus(StatusEnum.LoadFailure);
         startFailAnim();
     }
