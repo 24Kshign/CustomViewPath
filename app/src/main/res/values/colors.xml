@@ -6,4 +6,6 @@
 
     <color name="load_success">#03a44e</color>
     <color name="load_failure">#de0e26</color>
+
+    <color name="load">#f506d9</color>
 </resources>

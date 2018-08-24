@@ -12,6 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="3dp"
+        app:load_failure_color="@color/load"
+        app:load_success_color="@color/load"
+        app:progress_color="@color/load"
         app:progress_radius="40dp"
         app:progress_width="3dp" />
 
